@@ -31,9 +31,9 @@ namespace TPLOCAL1.Models
 
         [Required(ErrorMessage = "Le champ Formation est obligatoire")]
         public string TypeFormation { get; set; }
-        [Required(ErrorMessage = "Champ obligatoire, entrer N/E si non effectuée")]
+        [Required(ErrorMessage = "Champ obligatoire, entrer N si non effectuée")]
         public string AvisCobol { get; set; }
-        [Required(ErrorMessage = "Champ obligatoire, entrer N/E si non effectuée")]
+        [Required(ErrorMessage = "Champ obligatoire, entrer N si non effectuée")]
         public string AvisCSharp { get; set; }
     }
 }
