@@ -1,0 +1,57 @@
+﻿@model IEnumerable<TPLOCAL1.Models.Opinion>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Liste des avis</title>
+    <link rel="stylesheet" href="~/resources/Index.css" />
+    <link rel="stylesheet" href="~/resources/Form.css" />
+</head>
+
+<body>
+    <header>
+        <img src="~/resources/GroupeHN.png" class="image" alt="GroupeHN" />
+        <h1>Liste des avis</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a asp-controller="Home" asp-action="Index" asp-route-id="Index"> Accueil</a></li>
+            <li><a asp-controller="Home" asp-action="Index" asp-route-id="Form"> Remplissez le formulaire</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <table class="tp-table" border="4">
+           
+            <tr><th colspan="2" class="tp-th-center">Liste</th></tr>
+            <tr>
+                <td>Nom</td>
+                <td>Prénom</td>
+                <td>Avis donné</td>
+            </tr>
+            @foreach (var avis in Model)
+            {
+                <tr>
+                    <td>@avis.LastName</td>
+                    <td>@avis.FirstName</td>
+                    @if (avis.OpinionGiven == "O")
+                        {
+                            <td style="background-color: green">Oui</td>
+                        }
+                        else
+                        {
+                            <td style="background-color: red">Non</td>
+                        }
+                </tr>
+            }
+        </table>
+    </section>
+</body>
+</html>

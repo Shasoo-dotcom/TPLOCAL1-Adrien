@@ -1,0 +1,90 @@
+﻿@model TPLOCAL1.Models.FormModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Validation</title>
+    <link rel="stylesheet" href="~/resources/Index.css" />
+    <link rel="stylesheet" href="~/resources/Form.css"/>
+</head>
+
+<body>
+    <header>
+        <img src="~/resources/GroupeHN.png" class="image" alt="GroupeHN"/>
+        <h1>Page de validation</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a asp-controller="Home" asp-action="Index" asp-route-id="Index"> Accueil</a></li>
+            <li><a asp-controller="Home" asp-action="Index" asp-route-id="OpinionList">Liste avis</a></li>
+        </ul>
+    </nav>
+
+    <p> Votre formulaire a bien été pris en compte</p>
+    
+    <section>
+        <table class="tp-table">
+            <tr><th colspan="2" class="tp-th-center">Informations personnelles</th></tr>
+            <tr>
+                <td>Nom</td>
+                <td>@Model.Nom</td>
+            </tr>
+            <tr>
+                <td>Prénom</td>
+                <td>@Model.Prenom</td>
+            </tr>
+            <tr>
+                <td>Genre</td>
+                <td>@Model.Sexe</td>
+            </tr>
+            <tr>
+                <td>Adresse</td>
+                <td>@Model.Adresse</td>
+            </tr>
+            <tr>
+                <td>Code postal</td>
+                <td>@Model.CodePostal</td>
+            </tr>
+            <tr>
+                <td>Ville</td>
+                <td>@Model.Ville</td>
+            </tr>
+            <tr>
+                <td>Adresse email</td>
+                <td>@Model.Email</td>
+            </tr>
+        </table>
+
+        <table class="tp-table">
+            <tr><th colspan="2" class="tp-th-center">Informations formation suivie</th></tr>
+            <tr>
+                <td>Date début formation</td>
+                <td>@(Model.DateDebut?.ToString("dd/MM/yyyy"))</td>
+            </tr>
+            <tr>
+                <td>Formation suivie</td>
+                <td>@Model.TypeFormation</td>
+            </tr>
+        </table>
+
+        <table class="tp-table">
+            <tr><th colspan="2" class="tp-th-center">Avis sur la formation</th></tr>
+            <tr>
+                <td>Formation Cobol</td>
+                <td>@Model.AvisCobol</td>
+            </tr>
+            <tr>
+                <td>Formation C#</td>
+                <td>@Model.AvisCSharp</td>
+            </tr>
+        </table>
+    </section>
+
+</body>
+</html>

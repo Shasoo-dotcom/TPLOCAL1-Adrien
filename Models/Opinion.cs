@@ -67,14 +67,14 @@ namespace TPLOCAL1.Models
         /// <summary>
         /// Last name
         /// </summary>
-        public string LastName { get; set; }
+        public required string LastName { get; set; }
         /// <summary>
         /// First name
         /// </summary>
-        public string FirstName { get; set; }
+        public required string FirstName { get; set; }
         /// <summary>
         /// Review given (Possible values: O or N)
         /// </summary>
-        public string OpinionGiven { get; set; }
+        public required string OpinionGiven { get; set; }
     }
 }

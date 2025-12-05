@@ -1,0 +1,13 @@
+﻿.tp-table {
+    border-collapse: collapse;
+}
+
+    .tp-table td {
+        border: 1px solid #444;
+    }
+
+    .tp-table .tp-th-center {
+        text-align: center;
+        font-size: 1em;
+        font-weight: normal;
+    }
